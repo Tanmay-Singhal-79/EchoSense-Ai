@@ -111,7 +111,12 @@ export default function FaceCameraModal({
         const res = await enrollFace(descriptor, detectionState.confidence / 100 || 0.98);
         if (res.success) {
           setSuccessMessage('Face enrolled successfully! Biometric template encrypted.');
-          confetti({ particleCount: 60, spread: 60, origin: { y: 0.6 } });
+          confetti({
+            particleCount: 60,
+            spread: 60,
+            origin: { y: 0.6 },
+            colors: ['#ffffff', '#e4e4e7', '#a1a1aa', '#71717a'],
+          });
           setTimeout(() => {
             if (onSuccess) onSuccess();
             onClose();
@@ -124,7 +129,12 @@ export default function FaceCameraModal({
         const res = await loginWithFace(emailInput.trim(), descriptor);
         if (res.success) {
           setSuccessMessage(`Identity confirmed! Welcome back, ${res.user.name}.`);
-          confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+          confetti({
+            particleCount: 80,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#ffffff', '#e4e4e7', '#a1a1aa', '#71717a'],
+          });
           setTimeout(() => {
             if (onSuccess) onSuccess(res.user);
             onClose();

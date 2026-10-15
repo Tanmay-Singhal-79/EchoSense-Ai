@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06B6D4" />
-      <stop offset="50%" stop-color="#6366F1" />
-      <stop offset="100%" stop-color="#A855F7" />
+    <linearGradient id="monoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#71717A" />
     </linearGradient>
   </defs>
-  <circle cx="50" cy="50" r="46" fill="#0A0F26" stroke="url(#grad)" stroke-width="4" />
-  <path d="M 28 50 Q 38 25 50 50 T 72 50" fill="none" stroke="#22D3EE" stroke-width="4" stroke-linecap="round" />
-  <circle cx="50" cy="50" r="6" fill="#A855F7" />
-  <circle cx="35" cy="50" r="3" fill="#22D3EE" />
-  <circle cx="65" cy="50" r="3" fill="#6366F1" />
+  <circle cx="50" cy="50" r="46" fill="#000000" stroke="url(#monoGrad)" stroke-width="3.5" />
+  <path d="M 28 50 Q 38 25 50 50 T 72 50" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <circle cx="50" cy="50" r="5" fill="#FFFFFF" />
+  <circle cx="35" cy="50" r="3" fill="#D4D4D8" />
+  <circle cx="65" cy="50" r="3" fill="#A1A1AA" />
 </svg>

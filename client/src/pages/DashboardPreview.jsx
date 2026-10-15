@@ -37,11 +37,11 @@ import { useAuth } from '../hooks/useAuth';
 
 // Mock data strictly reflecting Project Synopsis figures (Page 9-11)
 const EMOTION_DISTRIBUTION = [
-  { name: 'Happy', value: 45, color: '#10B981' },
-  { name: 'Neutral', value: 25, color: '#06B6D4' },
-  { name: 'Sad', value: 15, color: '#6366F1' },
-  { name: 'Angry', value: 10, color: '#EF4444' },
-  { name: 'Fear', value: 5, color: '#F59E0B' },
+  { name: 'Happy', value: 45, color: '#FFFFFF' },
+  { name: 'Neutral', value: 25, color: '#E4E4E7' },
+  { name: 'Sad', value: 15, color: '#A1A1AA' },
+  { name: 'Angry', value: 10, color: '#71717A' },
+  { name: 'Fear', value: 5, color: '#3F3F46' },
 ];
 
 const VALENCE_TREND_DATA = [
@@ -237,8 +237,8 @@ export default function DashboardPreview({ onNavigate }) {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0E1738',
-                      borderColor: 'rgba(255,255,255,0.1)',
+                      backgroundColor: '#09090B',
+                      borderColor: 'rgba(255,255,255,0.2)',
                       borderRadius: 8,
                       color: '#fff',
                     }}
@@ -312,8 +312,8 @@ export default function DashboardPreview({ onNavigate }) {
               <YAxis domain={[-0.5, 1]} stroke="#64748B" />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#0E1738',
-                  borderColor: 'rgba(255,255,255,0.1)',
+                  backgroundColor: '#09090B',
+                  borderColor: 'rgba(255,255,255,0.2)',
                   borderRadius: 8,
                   color: '#fff',
                 }}
@@ -321,18 +321,19 @@ export default function DashboardPreview({ onNavigate }) {
               <Line
                 type="monotone"
                 dataKey="valence"
-                stroke="#06B6D4"
+                stroke="#FFFFFF"
                 strokeWidth={3}
-                dot={{ fill: '#06B6D4', r: 4 }}
+                dot={{ fill: '#FFFFFF', r: 4 }}
                 activeDot={{ r: 6 }}
                 name="Valence (Pleasantness)"
               />
               <Line
                 type="monotone"
                 dataKey="arousal"
-                stroke="#A855F7"
+                stroke="#71717A"
                 strokeWidth={2}
-                dot={{ fill: '#A855F7', r: 3 }}
+                strokeDasharray="4 4"
+                dot={{ fill: '#A1A1AA', r: 3 }}
                 name="Arousal (Intensity)"
               />
             </LineChart>
